@@ -1,5 +1,4 @@
 require 'gosu'
-
 class Mothership < Gosu::Window
   def initialize
     @data={:score => 0, :slot => 0, :section => "", :dice => [], :name => ""}
@@ -95,7 +94,7 @@ class Mothership < Gosu::Window
     @roll_button.draw(425,425,1)
     @selection_text=Gosu::Image.from_text(self,"#{@chosen_dice}","Times_New_Roman",30)
     @selection_text.draw(425,25,1)
-=begin  # this makes an infinite reroll/draw loop
+=begin # this makes an infinite reroll/draw loop
     @dice_set.reset
     @dice_set.roll_dice
 =end
@@ -118,7 +117,6 @@ class Mothership < Gosu::Window
     draw_quad(400,501,0xff000000,799,501,0xff000000,400,599,0xff000000,799,599,0xff000000)
   end
 end
-
 class Dice_set
   attr_accessor :dice_scores
   def initialize(data)
@@ -139,7 +137,7 @@ class Dice_set
     for die in dice_to_roll
       dice_int.push(die.to_i)
     end
-    for die in dice_int 
+    for die in dice_int
       @dice_scores[die-1]=rand(1..6)
     end
     draw
@@ -149,6 +147,6 @@ class Dice_set
     @dice_to_be_rolled="12345"
   end
 end #this works with Gosu
-
 game=Mothership.new
 game.show
+#new stuff

@@ -152,5 +152,3 @@ end #this works with Gosu
 
 game=Mothership.new
 game.show
-
-#new things

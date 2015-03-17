@@ -67,6 +67,10 @@ class Mothership < Gosu::Window
       end
     end
   end
+  def box_for_score(box_number)
+    draw_quad(355,20+box_number*30,0xffffffff,380,20+box_number*30,0xffffffff,355,45+box_number*30,0xffffffff,380,45+box_number*30,0xffffffff)
+    draw_quad(356,21+box_number*30,0xff000000,379,21+box_number*30,0xff000000,356,44+box_number*30,0xff000000,379,44+box_number*30,0xff000000)
+  end
   def button_down(id)
     case id
     when Gosu::KbEscape #Keyboard Escape
@@ -115,6 +119,9 @@ class Mothership < Gosu::Window
     draw_quad(666,400,0xff000000,666,500,0xff000000,799,400,0xff000000,799,500,0xff000000)#NO
     draw_quad(400,500,0xffffffff,800,500,0xffffffff,400,600,0xffffffff,800,600,0xffffffff)
     draw_quad(400,501,0xff000000,799,501,0xff000000,400,599,0xff000000,799,599,0xff000000)
+    for n in 0..18
+      box_for_score(n)
+    end
   end
 end
 class Dice_set

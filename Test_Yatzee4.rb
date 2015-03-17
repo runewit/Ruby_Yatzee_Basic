@@ -34,4 +34,4 @@ class Test_yatzee < Test::Unit::TestCase
   end
 end
 
-# Game and Mothership can't be tested as my program stands right now because they interfere with eachother's interface.  Game sits at command prompt waiting for a response while Mothership waits for an interaction in the window.  ideally, if I had an infinite amount of time, I would have merged Game and Mothership because they are both interface to the user.
+# Game and Mothership can't be tested as my program stands right now because they interfere with eachother's interface.  Game sits at command prompt waiting for a response while Mothership waits for an interaction in the window.  ideally, if I had another couple weeks to turn this in, I would have merged Game and Mothership because they are both interface to the user.
